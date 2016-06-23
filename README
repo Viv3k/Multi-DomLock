@@ -1,9 +1,12 @@
 
 The directory structure for the artifacts is as follow:
 
-DomLock_Artifacts
-|___README
-|
+Multi-DomLock
+│
+├── Thesis
+│                                              
+├── README              
+│
 └── StressTest
     ├── expected output
     ├── Hierarchical-locks-Graph
@@ -14,17 +17,18 @@ DomLock_Artifacts
         └── src
 
 
+
 ********************************************************************************************************************
 Directory structure of StressTest is as follow:
 ********************************************************************************************************************
 
 The current directory contains two sub-directories named, Hierarchical-locks-Graph and Hierarchical-locks-Tree. Hierarchical-locks-Graph contains implementation of directed graph data structure and Hierarchical-locks-Tree contains implementation of binary tree data structure.
-We use these two data structure for the evaluation of out MultiDomLock technique against the standard Intention locking technique for the hierarchies.
+We use these two data structure for the evaluation of out Multi-DomLock technique against the standard Intention locking technique for the hierarchies.
 
 
 The directory Hierarchical-locks-Tree is organized as follow:
 
-1. The directory "src" holds all the source code files. The header file, Tree.h contains the concurrent procedure "DummyTask()" which uses the MultiDomLock and Intention locks for synchronization. In file "Tree.h", the function  "modifiedDFS()" assigns the interval values to the nodes in the tree. 
+1. The directory "src" holds all the source code files. The header file, Tree.h contains the concurrent procedure "DummyTask()" which uses the Multi-DomLock and Intention locks for synchronization. In file "Tree.h", the function  "modifiedDFS()" assigns the interval values to the nodes in the tree.
 
 The directory structure of Hierarchical-locks-Graph is same as the Hierarchical-locks-Tree.
 
