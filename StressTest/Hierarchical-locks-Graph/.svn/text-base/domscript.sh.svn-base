@@ -1,0 +1,72 @@
+
+echo Domlock fraction = 1 to 16 Node = 2 >>currentOutput.txt
+./a.out 10000 16 5 2 1 >>currentOutput.txt
+
+./a.out 10000 16 5 2 2 >>currentOutput.txt
+
+./a.out 10000 16 5 2 4 >>currentOutput.txt
+
+./a.out 10000 16 5 2 8 >>currentOutput.txt
+./a.out 10000 16 5 2 16 >>currentOutput.txt
+
+echo Domlock fraction = 1 to 16 Node = 4 >>currentOutput.txt
+./a.out 10000 16 5 4 1 >>currentOutput.txt
+
+./a.out 10000 16 5 4 2 >>currentOutput.txt
+
+./a.out 10000 16 5 4 4 >>currentOutput.txt
+
+./a.out 10000 16 5 4 8 >>currentOutput.txt
+./a.out 10000 16 5 4 16 >>currentOutput.txt
+
+
+echo Domlock fraction = 1 to 16 Node = 8 >>currentOutput.txt
+./a.out 10000 16 5 8 1 >>currentOutput.txt
+
+./a.out 10000 16 5 8 2 >>currentOutput.txt
+
+./a.out 10000 16 5 8 4 >>currentOutput.txt
+
+./a.out 10000 16 5 8 8 >>currentOutput.txt
+./a.out 10000 16 5 8 16 >>currentOutput.txt
+
+echo Domlock fraction = 1 to 16 Node = 16 >>currentOutput.txt
+./a.out 10000 16 5 16 1 >>currentOutput.txt
+
+./a.out 10000 16 5 16 2 >>currentOutput.txt
+
+./a.out 10000 16 5 16 5 >>currentOutput.txt
+
+./a.out 10000 16 5 16 8 >>currentOutput.txt
+./a.out 10000 16 5 16 16 >>currentOutput.txt
+
+
+echo Domlock fraction = 1 to 16 Node = 32 >>currentOutput.txt
+./a.out 10000 16 5 32 1 >>currentOutput.txt
+
+./a.out 10000 16 5 32 2 >>currentOutput.txt
+
+./a.out 10000 16 5 32 5 >>currentOutput.txt
+
+./a.out 10000 16 5 32 8 >>currentOutput.txt
+./a.out 10000 16 5 32 16 >>currentOutput.txt
+
+echo Domlock fraction = 1 to 16 Node = 64 >>currentOutput.txt
+./a.out 10000 16 5 64 1 >>currentOutput.txt
+
+./a.out 10000 16 5 64 2 >>currentOutput.txt
+
+./a.out 10000 16 5 64 4 >>currentOutput.txt
+
+./a.out 10000 16 5 64 8 >>currentOutput.txt
+./a.out 10000 16 5 64 16 >>currentOutput.txt
+
+echo Domlock fraction = 1 to 16 Node = 128 >>currentOutput.txt
+./a.out 10000 16 5 128 1 >>currentOutput.txt
+
+./a.out 10000 16 5 128 2 >>currentOutput.txt
+
+./a.out 10000 16 5 128 4 >>currentOutput.txt
+
+./a.out 10000 16 5 128 8 >>currentOutput.txt
+./a.out 10000 16 5 128 16 >>currentOutput.txt

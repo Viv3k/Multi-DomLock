@@ -1,0 +1,61 @@
+echo >>./output/Intention.txt
+./a.out 1000000 16 4 1 1 >>./output/Intention.txt
+
+./a.out 1000000 16 4 1 2 >>./output/Intention.txt
+
+./a.out 1000000 16 4 1 4 >>./output/Intention.txt
+
+./a.out 1000000 16 4 1 8 >>./output/Intention.txt
+./a.out 1000000 16 4 1 16 >>./output/Intention.txt
+
+echo >>./output/Intention.txt
+./a.out 1000000 16 4 2 1 >>./output/Intention.txt
+
+./a.out 1000000 16 4 2 2 >>./output/Intention.txt
+
+./a.out 1000000 16 4 2 4 >>./output/Intention.txt
+
+./a.out 1000000 16 4 2 8 >>./output/Intention.txt
+./a.out 1000000 16 4 2 16 >>./output/Intention.txt
+
+echo >>./output/Intention.txt
+./a.out 1000000 16 4 4 1 >>./output/Intention.txt
+
+./a.out 1000000 16 4 4 2 >>./output/Intention.txt
+
+./a.out 1000000 16 4 4 4 >>./output/Intention.txt
+
+./a.out 1000000 16 4 4 8 >>./output/Intention.txt
+./a.out 1000000 16 4 4 16 >>./output/Intention.txt
+
+
+echo >>./output/Intention.txt
+./a.out 1000000 16 4 8 1 >>./output/Intention.txt
+
+./a.out 1000000 16 4 8 2 >>./output/Intention.txt
+
+./a.out 1000000 16 4 8 4 >>./output/Intention.txt
+
+./a.out 1000000 16 4 8 8 >>./output/Intention.txt
+./a.out 1000000 16 4 8 16 >>./output/Intention.txt
+
+echo >>./output/Intention.txt
+./a.out 1000000 16 4 16 1 >>./output/Intention.txt
+
+./a.out 1000000 16 4 16 2 >>./output/Intention.txt
+
+./a.out 1000000 16 4 16 4 >>./output/Intention.txt
+
+./a.out 1000000 16 4 16 8 >>./output/Intention.txt
+./a.out 1000000 16 4 16 16 >>./output/Intention.txt
+
+
+echo >>./output/Intention.txt
+./a.out 1000000 16 4 32 1 >>./output/Intention.txt
+
+./a.out 1000000 16 4 32 2 >>./output/Intention.txt
+
+./a.out 1000000 16 4 32 4 >>./output/Intention.txt
+
+./a.out 1000000 16 4 32 8 >>./output/Intention.txt
+./a.out 1000000 16 4 32 16 >>./output/Intention.txt

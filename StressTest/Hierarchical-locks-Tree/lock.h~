@@ -1,0 +1,119 @@
+#ifndef Lock_H
+#define Lock_H
+#include"TreeNode.h"
+
+void Lock(pthread_mutex_t *rootLock)
+{
+  pthread_mutex_lock(rootLock);
+}
+
+void UnLock(pthread_mutex_t *rootLock)
+{
+  pthread_mutex_unlock(rootLock);
+}
+
+void ISLock(TreeNode *node)
+{
+check : while(node->IsIx == 4);
+  
+  Lock(&node->Lock);
+  if(node->IsIx != 4)
+  {
+    pthread_rwlock_rdlock(& node->rwlock);
+    if(node->IsIx < 1)
+      node->IsIx=1;
+    node->refCounter++;
+  }
+  else
+  {
+    UnLock(&node->Lock);
+    goto check;
+  }
+    
+  UnLock(&node->Lock);
+  
+  
+}
+
+
+void IXLock(TreeNode *node)
+{
+check : while(node->IsIx >2);
+  
+  Lock(&node->Lock);
+  if(node->IsIx <= 2)
+  {
+    pthread_rwlock_rdlock(& node->rwlock);
+    if(node->IsIx < 2)
+      node->IsIx=2;
+    node->refCounter++;
+  }
+  else
+  {
+    UnLock(&node->Lock);
+    goto check;
+  }
+    
+  UnLock(&node->Lock);
+  
+  
+}
+
+void SLock(TreeNode *node)
+{
+check : while(node->IsIx == 2 || node-> IsIx == 4);
+  
+  Lock(&node->Lock);
+  if(node->IsIx != 2 && node->IsIx != 4)
+  {
+    pthread_rwlock_rdlock(& node->rwlock);
+    if(node->IsIx < 3)
+      node->IsIx=3;
+    node->refCounter++;
+  }
+  else
+  {
+    UnLock(&node->Lock);
+    goto check;
+  }
+    
+  UnLock(&node->Lock);
+}
+
+void XLock(TreeNode *node)
+{
+check : while(node->refCounter != 0);
+  
+  Lock(&node->Lock);
+  if(node->refCounter == 0)
+  {
+    pthread_rwlock_wrlock(& node->rwlock);
+    node->IsIx=4;
+    node->refCounter++;
+  }
+  else
+  {
+    UnLock(&node->Lock);
+    goto check;
+  }
+    
+  UnLock(&node->Lock);
+  
+  
+}
+
+
+void IUnLock(TreeNode *node)
+{
+  Lock(&node->Lock);
+  pthread_rwlock_unlock(&rwlock);
+  node->refCounter--;
+  if( node->refCounter == 0)
+    node->IsIx = 0;
+
+  UnLock(&node->Lock);
+  
+}
+
+
+#endif

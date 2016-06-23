@@ -1,0 +1,5 @@
+CC=g++
+CFLAGS= -lpthread
+
+treemake: main.o 
+	 $(CC) -o treemake  main.o $(CFLAGS)

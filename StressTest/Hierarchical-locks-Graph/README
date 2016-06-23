@@ -1,0 +1,17 @@
+./a.out No_of_Nodes No_threads Technique No_of_nodes_to_be_locked distribution size_of_critical_section
+
+Parameter 1- Size of tree
+Parameter 2- No of threads
+Parameter 3- Technique
+
+Technique: 
+1- Coarse
+2- Fine grain Path traversal
+3- Fine grain direct address
+4- Intention locking
+5- Multi-Dominator locking
+
+
+Parameter 4- No of nodes to be locked
+Parameter 5- distribution 2|4|8|16
+Parameter 6- Size of critical section s|m|l

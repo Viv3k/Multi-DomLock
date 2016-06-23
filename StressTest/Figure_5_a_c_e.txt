@@ -1,0 +1,34 @@
+First column represent execution time(in second) with DomLock and 
+ Second column represent execution time(in second) for Intention locks
+X-axis is the number of locked nodes from 2 to 256 in power of 2's
+Y-axis is the execution time in second
+Plots for small critical section
+0 0.00600887
+0 0.00991794
+0 0.0172635
+0 0.0309661
+0 0.074386
+0 0.0938547
+0 0.167775
+0 0.248543
+
+Plots for medium critical section
+0 0.0231132
+0 0.0267506
+0 0.0339204
+0 0.0545097
+0 0.0772918
+0 0.116197
+0 0.18146
+0 0.264608
+
+Plots for large critical section
+0 0.222823
+0 0.208126
+0 0.223042
+0 0.271367
+0 0.321269
+0 0.360519
+0 0.406071
+0 0.506431
+

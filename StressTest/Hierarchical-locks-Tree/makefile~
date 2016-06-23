@@ -1,0 +1,9 @@
+CC=g++
+CXXFLAGS = -O3 -g
+DEPS = BinaryTree.h errorHandler.h ParallelThreads.h Tree.h TreeNode.h
+
+%.o: %.c $(DEPS)
+	$(CC) -c -o $@ $< $(CFLAGS)
+
+treemake: main.cpp 
+	 $(CC) -o treemake  main.cpp $(CXXFLAGS) $^

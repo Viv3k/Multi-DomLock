@@ -1,0 +1,65 @@
+X-axis is the value of distribution and Y-axis is execution time in second
+Plot for distribution with 2 nodes
+DomLock -- Intention Locks 
+0 0.0231236
+0 0.0231036
+0 0.023148
+0 0.022987
+0 0.023204
+
+Plot for distribution with 4 nodes
+DomLock -- Intention Locks 
+0 0.027054
+0 0.0271216
+0 0.0269846
+0 0.0264691
+0 0.0261238
+
+Plot for distribution with 8 nodes
+DomLock -- Intention Locks 
+0 0.0355334
+0 0.0346594
+0 0.0341932
+0 0.0333078
+0 0.0319082
+
+Plot for distribution with 16 nodes
+DomLock -- Intention Locks 
+0 0.0541051
+0 0.0553326
+0 0.0586228
+0 0.0546026
+0 0.0498853
+
+Plot for distribution with 32 nodes
+DomLock -- Intention Locks 
+0 0.109908
+0 0.0843672
+0 0.0745624
+0 0.0633862
+0 0.0542353
+
+Plot for distribution with 64 nodes
+DomLock -- Intention Locks 
+0 0.167435
+0 0.133091
+0 0.110264
+0 0.0891896
+0 0.0810057
+
+Plot for distribution with 128 nodes
+DomLock -- Intention Locks 
+0 0.325023
+0 0.214685
+0 0.17005
+0 0.119443
+0 0.0780986
+
+Plot for distribution with 256 nodes
+DomLock -- Intention Locks 
+0 0.528096
+0 0.330829
+0 0.22857
+0 0.14324
+0 0.0923031
+

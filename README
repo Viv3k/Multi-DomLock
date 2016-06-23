@@ -1,0 +1,101 @@
+
+The directory structure for the artifacts is as follow:
+
+DomLock_Artifacts
+├── STMBench
+│   ├── stmbench7 baseline.c++
+│   │   ├── sb7_lock
+│   │      ├── output
+│   │      ├── src
+│   │      │   ├── operations
+│   │      │   │   ├── base
+│   │      │   │   ├── locking_coarse
+│   │      │   │   ├── locking_fine
+│   │      │   │   └── locking_medium
+│   │      │   ├── randomc
+│   │      │   ├── struct
+│   │      │   └── thread
+│   │      └── target
+│   │          └── obj
+│   │   
+│   │       
+│   │                                    
+│   ├── stmbench7.c++
+│   │   ├── sb7_lock
+│   │      ├── output
+│   │      ├── src
+│   │      │   ├── operations
+│   │      │   │   ├── base
+│   │      │   │   ├── locking_coarse
+│   │      │   │   ├── locking_fine
+│   │      │   │   └── locking_medium
+│   │      │   ├── randomc
+│   │      │   ├── struct
+│   │      │   └── thread
+│   │      └── target
+│   │          └── obj
+│   │   
+│   │     
+│   │         
+│   │          
+│   │           
+│   │           
+│   └── stmbench7_Editing.c++
+│       ├── sb7_lock
+│          ├── src
+│          │   ├── operations
+│          │   │   ├── base
+│          │   │   ├── locking_coarse
+│          │   │   ├── locking_fine
+│          │   │   └── locking_medium
+│          │   ├── randomc
+│          │   ├── struct
+│          │   └── thread
+│          └── target
+│              └── obj      
+│                                              
+│               
+└── StressTest
+    ├── expected output
+    ├── Hierarchical-locks-Graph
+    │   ├── output
+    │   └── src
+    └── Hierarchical-locks-Tree
+        ├── output
+        └── src
+
+
+********************************************************************************************************************
+Directory structure of STMBench is as follow:
+********************************************************************************************************************
+
+The directory contain 3 sub-directories,
+
+1. stmbench7baseline.c++
+	Inside this directory, i.e., "sb7_lock" provides a version on STMBench7 without any synchronization. This means the throughput that we get without any synchronization is the theoretical maximum throughput. 	
+
+2. stmbench7.c++
+	Inside current directory, i.e., "sb7_lock" provides the coarse-grained and medium-grained version on STMBench7.	
+
+
+3. stmbench_Editing.c++
+	> Inside current directory, i.e., "sb7_lock" provides the DomLock version on STMBench7.
+	> Implementation of DFS based algorithm for assigning logical intervals can be found at ./scr/operations/locking_medium/traversal_ops_lm.cc. The function "LMTraversalDFS::traverse" implements the logical interval algorithm.
+	> Algorithm for finding dominator nodes can be found at ./scr/operations/operations.cc. The function "Operation::Dom_traverse" implements the FindDomintor algorithm.
+
+
+********************************************************************************************************************
+Directory structure of StressTest is as follow:
+********************************************************************************************************************
+
+The current directory contains two sub-directories named, Hierarchical-locks-Graph and Hierarchical-locks-Tree. Hierarchical-locks-Graph contains implementation of directed graph data structure and Hierarchical-locks-Tree contains implementation of binary tree data structure.
+We use these two data structure for the evaluation of out DomLock technique against the standard Intention locking technique for the hierarchies.
+
+
+The directory Hierarchical-locks-Tree is organized as follow:
+
+1. The directory "src" holds all the source code files. The header file, Tree.h contains the concurrent procedure "DummyTask()" which uses the DomLock and Intention locks for synchronization. In file "Tree.h", the function  "modifiedDFS()" assigns the interval values to the nodes in the tree. The file "interval.h" has the implementation of DomLock and the "lock.h" has the implementation of Intention Locks. 
+
+The directory structure of Hierarchical-locks-Graph is same as the Hierarchical-locks-Tree.
+
+

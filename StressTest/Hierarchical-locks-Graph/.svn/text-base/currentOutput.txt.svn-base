@@ -1,0 +1,14 @@
+Domlock fraction = 1 to 16 Node = 2
+1.02595 0.976894 1.01962 0.974091 0.981636 
+Domlock fraction = 1 to 16 Node = 4
+0.996277 0.974111 1.00479 1.02181 0.953498 
+Domlock fraction = 1 to 16 Node = 8
+0.882482 0.970515 0.988875 1.03505 0.751431 
+Domlock fraction = 1 to 16 Node = 16
+1.00949 1.02144 1.00885 0.988225 1.03479 
+Domlock fraction = 1 to 16 Node = 32
+0.990995 0.887779 1.00833 0.854652 0.980792 
+Domlock fraction = 1 to 16 Node = 64
+1.04795 1.04103 1.03107 1.08612 0.90239 
+Domlock fraction = 1 to 16 Node = 128
+1.09816 0.746213 1.09153 1.08067 1.04225 

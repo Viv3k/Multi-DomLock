@@ -1,0 +1,72 @@
+echo Intention fraction = 1 to 16 Node = 2 >>OutputIntention.txt
+./a.out 10000 16 4 2 1 >>OutputIntention.txt
+
+./a.out 10000 16 4 2 2 >>OutputIntention.txt
+
+./a.out 10000 16 4 2 4 >>OutputIntention.txt
+
+./a.out 10000 16 4 2 8 >>OutputIntention.txt
+./a.out 10000 16 4 2 16 >>OutputIntention.txt
+
+echo Intention fraction = 1 to 16 Node = 4 >>OutputIntention.txt
+./a.out 10000 16 4 4 1 >>OutputIntention.txt
+
+./a.out 10000 16 4 4 2 >>OutputIntention.txt
+
+./a.out 10000 16 4 4 4 >>OutputIntention.txt
+
+./a.out 10000 16 4 4 8 >>OutputIntention.txt
+./a.out 10000 16 4 4 16 >>OutputIntention.txt
+
+
+echo Intention fraction = 1 to 16 Node = 8 >>OutputIntention.txt
+./a.out 10000 16 4 8 1 >>OutputIntention.txt
+
+./a.out 10000 16 4 8 2 >>OutputIntention.txt
+
+./a.out 10000 16 4 8 4 >>OutputIntention.txt
+
+./a.out 10000 16 4 8 8 >>OutputIntention.txt
+./a.out 10000 16 4 8 16 >>OutputIntention.txt
+
+echo Intention fraction = 1 to 16 Node = 16 >>OutputIntention.txt
+./a.out 10000 16 4 16 1 >>OutputIntention.txt
+
+./a.out 10000 16 4 16 2 >>OutputIntention.txt
+
+./a.out 10000 16 4 16 4 >>OutputIntention.txt
+
+./a.out 10000 16 4 16 8 >>OutputIntention.txt
+./a.out 10000 16 4 16 16 >>OutputIntention.txt
+
+
+echo Intention fraction = 1 to 16 Node = 32 >>OutputIntention.txt
+./a.out 10000 16 4 32 1 >>OutputIntention.txt
+
+./a.out 10000 16 4 32 2 >>OutputIntention.txt
+
+./a.out 10000 16 4 32 4 >>OutputIntention.txt
+
+./a.out 10000 16 4 32 8 >>OutputIntention.txt
+./a.out 10000 16 4 32 16 >>OutputIntention.txt
+
+
+echo Intention fraction = 1 to 16 Node = 64 >>OutputIntention.txt
+./a.out 10000 16 4 64 1 >>OutputIntention.txt
+
+./a.out 10000 16 4 64 2 >>OutputIntention.txt
+
+./a.out 10000 16 4 64 4 >>OutputIntention.txt
+
+./a.out 10000 16 4 64 8 >>OutputIntention.txt
+./a.out 10000 16 4 64 16 >>OutputIntention.txt
+
+echo Intention fraction = 1 to 16 Node = 128 >>OutputIntention.txt
+./a.out 10000 16 4 128 1 >>OutputIntention.txt
+
+./a.out 10000 16 4 128 2 >>OutputIntention.txt
+
+./a.out 10000 16 4 128 4 >>OutputIntention.txt
+
+./a.out 10000 16 4 128 8 >>OutputIntention.txt
+./a.out 10000 16 4 128 16 >>OutputIntention.txt

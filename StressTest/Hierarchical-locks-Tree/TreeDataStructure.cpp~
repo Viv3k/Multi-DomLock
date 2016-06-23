@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+
+class tree
+{
+
+public:
+int data;
+tree *left;
+tree *right;
+
+};
+
+tree* insert(int key)
+{
+tree t=new tree();
+t.data=key;
+t.left=NULL;
+t.right=NULL;
+return t;
+}
+
+
+int main()
+{
+tree *root;
+root=(tree*)insert(5);
+}

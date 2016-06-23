@@ -1,0 +1,45 @@
+#include<iostream>
+#include<string.h>
+#include<vector>
+//#include<atomic>
+using namespace std;
+
+int main()
+{
+
+//std::atomic<int> count;
+
+
+//count = 5;
+
+vector<int> v[10];
+
+v.push_back(4);
+v.push_back(41);
+
+//int y = count.fetch_add(5);
+//int z = count.fetch_add(1);
+ /* for(int i=1;i<=9;i++)
+  {
+  string path="";
+  int no=i;
+while(no>1)
+{
+  if(no%2==0)
+  {
+   path=path+"l";
+    no=no/2;
+    
+  }
+  else
+  {
+    path=path+"r";
+    no=no/2;
+    
+  }*/
+  
+
+cout<<v.size();
+  }
+
+

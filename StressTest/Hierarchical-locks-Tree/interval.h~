@@ -1,0 +1,78 @@
+
+
+#ifndef SB7_INTERVAL_H_
+#define SB7_INTERVAL_H_
+
+#include <vector>
+using namespace std;
+
+class interval{
+
+public: int pre, post;
+	interval( int a, int b){
+	pre = a; post = b;
+	}
+};
+
+//**************************************************************************************************************
+class IntervalCheck{
+public:
+vector < interval *> Read_pool;
+vector <interval *> Write_pool;
+pthread_rwlock_t RdLock;
+pthread_rwlock_t WrLock;
+
+IntervalCheck()
+{
+pthread_rwlock_init(&RdLock, NULL);
+pthread_rwlock_init(&WrLock, NULL);
+}
+
+bool IsWriteOverlap(interval *inv)
+{
+for(int i=0; i< Write_pool.size(); i++)
+{
+if((Write_pool[i]->pre > inv->pre && Write_pool[i]->post < inv->post) ||
+		(Write_pool[i]->pre < inv->pre && Write_pool[i]->post > inv->post))
+return true;
+}
+return false;
+}
+
+
+bool IsReadOverlap(interval *inv)
+{
+
+for(int i=0; i< Read_pool.size(); i++)
+{
+if((Read_pool[i]->pre > inv->pre && Read_pool[i]->post < inv->post) ||
+		(Read_pool[i]->pre < inv->pre && Read_pool[i]->post > inv->post))
+return true;
+}
+return false;
+}
+
+
+void deleteReadPool(interval *inv)
+{
+for(int i=0; i< Read_pool.size(); i++)
+{
+if(Read_pool[i] == inv)
+Read_pool.erase(Read_pool.begin()+i);
+}
+
+}
+
+void deleteWritePool(interval *inv)
+{
+for(int i=0; i< Write_pool.size(); i++)
+{
+if(Write_pool[i]->pre == inv->pre && Write_pool[i]->post == inv-> post)
+Write_pool.erase(Write_pool.begin()+i);
+}
+
+}
+
+};
+
+#endif

@@ -1,0 +1,97 @@
+
+
+#ifndef SB7_INTERVAL_H_
+#define SB7_INTERVAL_H_
+
+#include <vector>
+#include <stdlib.h>
+using namespace std;
+#define SIZE 20
+class interval{
+
+public: int pre, post, mode;
+	interval( int a, int b, int m){
+	pre = a; post = b; mode = m;
+	}
+};
+
+//**************************************************************************************************************
+class IntervalCheck{
+public:
+interval *Array[SIZE];
+pthread_rwlock_t ArrayLock[SIZE];
+
+IntervalCheck()
+{
+	for(int i = 0;i<SIZE; i++)
+	{
+		
+		Array[i] = NULL;
+		pthread_rwlock_t ArrayLock[i];
+	}
+
+
+
+}
+
+bool IsOverlap(interval *inv, int m, int threadID)
+{
+//cout<<"m=1";
+pthread_rwlock_wrlock(&ArrayLock[0]);
+ if(m == 1)
+{	
+for(int i=0; i< SIZE; i++)
+	{
+		//pthread_rwlock_wrlock(&ArrayLock[i]);
+		//	printf("read lock %d %d",i,threadID);
+		if(Array[i] != NULL)
+		{		
+			
+			if((Array[i]->pre >= inv->pre && Array[i]->post <= inv->post) ||
+			(Array[i]->pre <= inv->pre && Array[i]->post >= inv->post))
+			{
+			//for(int j = i; j>=0; j--)
+			pthread_rwlock_unlock(&ArrayLock[0]);
+			return true;
+			}
+		}
+		
+		//pthread_rwlock_unlock(&ArrayLock[i]);
+	}
+
+//pthread_rwlock_unlock(&ArrayLock[threadID]);
+Insert(inv, threadID);
+pthread_rwlock_unlock(&ArrayLock[0]);
+//printf("inserted by %d",threadID);
+//for(int j = SIZE-1; j>=0; j--)
+//{
+//if(j!= threadID)
+//pthread_rwlock_unlock(&ArrayLock[j]);
+//}
+return false;
+
+} 
+}
+
+void Insert(interval *inv, int index)
+{
+
+	//pthread_rwlock_wrlock(&ArrayLock[index]);	
+	Array[index] = inv;
+	//pthread_rwlock_unlock(&ArrayLock[index]);
+	
+}
+
+void Delete(int index)
+{//index=0;
+	pthread_rwlock_wrlock(&ArrayLock[0]);
+	
+	Array[index] = NULL;
+	pthread_rwlock_unlock(&ArrayLock[0]);
+	
+
+}
+
+};
+
+#endif
